@@ -30,3 +30,5 @@ nativewind-env.d.ts => add /// <reference types="nativewind/types"/>
 # after:
 
 npx expo start --clear
+
+### Check => ./assets/images/React Native Guide
