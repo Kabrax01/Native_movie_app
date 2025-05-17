@@ -6,45 +6,27 @@ This is an [Expo](https://expo.dev) project created with [`create-expo-app`](htt
 
 1. Install dependencies
 
-   ```bash
-   npm install
-   ```
+## NativeWind install
 
-2. Start the app
+npm install nativewind tailwindcss react-native-reanimated react-native-safe-area-context
 
-   ```bash
-   npx expo start
-   ```
+https://www.nativewind.dev/docs/getting-started/installation
 
-In the output, you'll find options to open the app in a
+npx expo customize metro.config.js
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+# in this =>
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+const { getDefaultConfig } = require("expo/metro-config");
+const { withNativeWind } = require("nativewind/metro");
 
-## Get a fresh project
+const config = getDefaultConfig(\_\_dirname);
 
-When you're ready, run:
+module.exports = withNativeWind(config, { input: "./app/globals.css" });
 
-```bash
-npm run reset-project
-```
+# create in root:
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+nativewind-env.d.ts => add /// <reference types="nativewind/types"/>
 
-## Learn more
+# after:
 
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+npx expo start --clear
