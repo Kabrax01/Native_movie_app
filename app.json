@@ -8,6 +8,11 @@
         "scheme": "movies",
         "userInterfaceStyle": "automatic",
         "newArchEnabled": true,
+        "androidStatusBar": {
+            "hidden": true,
+            "backgroundColor": "#00000f",
+            "translucent": true
+        },
         "ios": {
             "supportsTablet": true
         },

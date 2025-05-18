@@ -1,0 +1,64 @@
+import { icons } from "@/constants/icons";
+import { Text } from "@react-navigation/elements";
+import { Link } from "expo-router";
+import React from "react";
+import { Image, StyleSheet, TouchableOpacity, View } from "react-native";
+
+const MovieCard = ({
+    id,
+    poster_path,
+    title,
+    vote_average,
+    release_date,
+}: Movie) => {
+    return (
+        <Link href={`/movie/${id}`} asChild>
+            <TouchableOpacity className="w-[30%] ">
+                <Image
+                    source={{
+                        uri: poster_path
+                            ? `https://image.tmdb.org/t/p/w500${poster_path}`
+                            : "https://placehold.co/600x400/1a1a1a/FFFFFF.png",
+                    }}
+                    className="w-full h-52 rounded-lg"
+                    resizeMode="cover"
+                />
+
+                <Text style={[styles.text]} numberOfLines={1}>
+                    {title}
+                </Text>
+
+                <View className="flex-row items-center justify-start gap-x-1">
+                    <Image source={icons.star} className="size-4" />
+
+                    <Text style={[styles.text]}>
+                        {Math.round(vote_average / 2)}
+                    </Text>
+                </View>
+
+                <View className="flex-row items-center justify-between">
+                    <Text style={[styles.text2]}>
+                        {release_date?.split("-")[0]}
+                    </Text>
+                </View>
+            </TouchableOpacity>
+        </Link>
+    );
+};
+
+const styles = StyleSheet.create({
+    text: {
+        color: "white",
+        fontWeight: "bold",
+        fontSize: 12,
+        lineHeight: 20,
+    },
+    text2: {
+        fontSize: 12,
+        lineHeight: 16,
+        color: "#9CA4AB",
+        marginTop: 4,
+    },
+});
+
+export default MovieCard;
