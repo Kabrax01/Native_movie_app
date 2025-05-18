@@ -8,13 +8,18 @@
         "scheme": "movies",
         "userInterfaceStyle": "automatic",
         "newArchEnabled": true,
+        "androidStatusBar": {
+            "hidden": true,
+            "backgroundColor": "#000000",
+            "translucent": true
+        },
         "ios": {
             "supportsTablet": true
         },
         "android": {
             "adaptiveIcon": {
                 "foregroundImage": "./assets/images/logo.png",
-                "backgroundColor": "#ffffff"
+                "backgroundColor": "#000000"
             },
             "edgeToEdgeEnabled": true
         },
