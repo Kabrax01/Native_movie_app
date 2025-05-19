@@ -19,9 +19,10 @@
         "android": {
             "adaptiveIcon": {
                 "foregroundImage": "./assets/images/logo.png",
-                "backgroundColor": "#ffffff"
+                "backgroundColor": "#00000f"
             },
-            "edgeToEdgeEnabled": true
+            "edgeToEdgeEnabled": true,
+            "package": "com.kabrax.Native_movie_app"
         },
         "web": {
             "bundler": "metro",
@@ -36,12 +37,18 @@
                     "image": "./assets/images/logo.png",
                     "imageWidth": 200,
                     "resizeMode": "contain",
-                    "backgroundColor": "#ffffff"
+                    "backgroundColor": "#00000f"
                 }
             ]
         ],
         "experiments": {
             "typedRoutes": true
+        },
+        "extra": {
+            "router": {},
+            "eas": {
+                "projectId": "b6e8f3c0-2f0a-48a1-83eb-fb9fe7b673ea"
+            }
         }
     }
 }
