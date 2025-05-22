@@ -28,7 +28,7 @@ const Search = () => {
         }, 600);
 
         return () => clearTimeout(timeoutId);
-    }, [searchQuery, loadMovies, reset]);
+    }, [searchQuery]);
 
     return (
         <View className="flex-1 bg-primary">
