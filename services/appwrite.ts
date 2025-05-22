@@ -10,6 +10,7 @@ const client = new Client()
 const database = new Databases(client);
 
 export const updateSearchCount = async (query: string, movie: Movie) => {
+    console.log(movie);
     try {
         const result = await database.listDocuments(
             DATABASE_ID,
