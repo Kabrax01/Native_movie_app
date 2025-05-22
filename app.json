@@ -48,7 +48,10 @@
             "router": {},
             "eas": {
                 "projectId": "b6e8f3c0-2f0a-48a1-83eb-fb9fe7b673ea"
-            }
+            },
+            "appwriteProjectId": "twoje_project_id",
+            "appwriteDatabaseId": "twoje_database_id",
+            "appwriteCollectionId": "twoje_collection_id"
         }
     }
 }
